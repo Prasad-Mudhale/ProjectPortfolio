@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Wheel Weight Lifter - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Global Styles - Matching Home Page */
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #FFFFFF 0%, #E0F7FA 100%); color: #333; line-height: 1.6; animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: #1E88E5; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .btn { background: linear-gradient(45deg, #00BCD4, #1E88E5); color: #FFFFFF; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .btn:hover { background: linear-gradient(45deg, #FFFF00, #00BCD4); transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.3); }
+        .shadow { box-shadow: 0 6px 12px rgba(0,0,0,0.15); border: 2px solid #FFFF00; border-radius: 12px; }
+        /* Header */
+        header { background: linear-gradient(90deg, #1E88E5, #00BCD4); padding: 15px 0; position: fixed; top: 0; width: 100%; z-index: 100; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8em; font-weight: 700; color: #FFFFFF; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; }
+        nav a { color: #FFFFFF; text-decoration: none; font-weight: 700; transition: all 0.3s; padding: 5px 10px; border-radius: 5px; }
+        nav a:hover { background-color: #FFFF00; color: #333; transform: scale(1.05); }
+        /* Footer */
+        footer { background: linear-gradient(90deg, #B0BEC5, #1E88E5); padding: 30px 0; text-align: center; color: #333; }
+        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-around; margin-bottom: 20px; }
+        .footer-section { flex: 1; min-width: 200px; margin: 10px; }
+        .social-icons a { color: #333; font-size: 1.5em; margin: 0 10px; transition: all 0.3s; }
+        .social-icons a:hover { color: #FFFF00; transform: scale(1.2); }
+        /* About-Specific Styles */
+        .section { margin: 50px 0; padding: 30px; background: linear-gradient(135deg, #E0F7FA 0%, #FFFFFF 100%); border-radius: 15px; transition: transform 0.3s; }
+        .section:hover { transform: translateY(-5px); }
+        .feature { display: flex; align-items: center; margin: 25px 0; }
+        .feature i { font-size: 2.5em; color: #00BCD4; margin-right: 25px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .feature img { width: 120px; height: 120px; border-radius: 15px; margin-left: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: transform 0.3s; }
+        .feature img:hover { transform: scale(1.05); }
+        /* Responsive */
+        @media (max-width: 768px) { .feature { flex-direction: column; text-align: center; } .section { padding: 20px; } nav ul { flex-direction: column; gap: 15px; } .footer-content { flex-direction: column; } .social-icons a { font-size: 1.2em; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">AWWL</div>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Review</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <div class="container">
+            <h2>About the Autonomous Wheel Weight Lifter</h2>
+            <section class="section shadow">
+                <h3>Concept and Purpose</h3>
+                <p>The Autonomous Wheel Weight Lifter is an innovative engineering solution designed for industrial applications, automating the handling of heavy wheel weights in manufacturing and assembly lines. It reduces manual labor, enhances precision, and improves safety in high-volume production environments.</p>
+                <img src="concept-image.jpg" alt="Concept Image" style="width: 100%; max-width: 700px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            </section>
+            <section class="section shadow">
+                <h3>Autonomous Features</h3>
+                <div class="feature">
+                    <i class="fas fa-robot"></i>
+                    <p>AI-powered navigation and decision-making for seamless, obstacle-free operations in dynamic industrial settings.</p>
+                    <img src="autonomous-feature.jpg" alt="Autonomous Feature">
+                </div>
+            </section>
+            <section class="section shadow">
+                <h3>Sensors and Technology</h3>
+                <div class="feature">
+                    <i class="fas fa-eye"></i>
+                    <p>Integrated LIDAR, ultrasonic, and vision sensors for real-time obstacle detection, alignment, and precise positioning.</p>
+                    <img src="sensors.jpg" alt="Sensors">
+                </div>
+            </section>
+            <section class="section shadow">
+                <h3>Lifting Mechanism</h3>
+                <div class="feature">
+                    <i class="fas fa-cogs"></i>
+                    <p>Hydraulic lifting arms with adjustable grips, capable of handling up to 500kg, ensuring secure and efficient weight management.</p>
+                    <img src="lifting-mechanism.jpg" alt="Lifting Mechanism">
+                </div>
+            </section>
+            <section class="section shadow">
+                <h3>Benefits</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><i class="fas fa-check-circle" style="color: #00BCD4; margin-right: 10px;"></i>Increased efficiency and reduced operational downtime.</li>
+                    <li><i class="fas fa-check-circle" style="color: #00BCD4; margin-right: 10px;"></i>Enhanced worker safety by minimizing heavy lifting risks.</li>
+                    <li><i class="fas fa-check-circle" style="color: #00BCD4; margin-right: 10px;"></i>Cost savings through automation and lower insurance premiums.</li>
+                    <li><i class="fas fa-check-circle" style="color: #00BCD4; margin-right: 10px;"></i>Scalable for various industrial applications.</li>
+                </ul>
+            </section>
+            <section class="section shadow">
+                <h3>Real Industrial Use Case</h3>
+                <p>Deployed in MIDC (Maharashtra Industrial Development Corporation) industries for wheel assembly, where it has demonstrated reliable performance in real-world production lines, reducing manual errors and improving throughput by 40%.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <p>123 Industrial Lane, Tech City, State 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Team Emails</h4>
+                    <p><a href="mailto:team1@gmail.com">team1@gmail.com</a></p>
+                    <p><a href="mailto:team2@gmail.com">team2@gmail.com</a></p>
+                    <p><a href="mailto:team3@gmail.com">team3@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/your-handle" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:your-email@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2023 Autonomous Wheel Weight Lifter Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

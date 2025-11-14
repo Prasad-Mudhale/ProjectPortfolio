@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f9fc;
+    color: #333;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    padding: 18px 50px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+}
+
+/* Hero */
+.hero {
+    background: #eef7ff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+.hero img {
+    width: 80%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Section Title */
+.section-title {
+    margin: 50px 0 20px 0;
+    text-align: center;
+    font-size: 28px;
+    color: #0077cc;
+    font-weight: 700;
+}
+
+/* Slider */
+.slider-container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+
+.slider-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    width: 35px;
+    height: 35px;
+    background: #0077cc;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.left { left: -50px; }
+.right { right: -50px; }
+
+/* Team Cards */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.social-icons a {
+    margin: 10px;
+    font-size: 22px;
+    color: #0077cc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px;
+    background: #0077cc;
+    color: white;
+}
+
+footer .social-footer a {
+    margin: 0 10px;
+    color: white;
+    font-size: 22px;
+}
+
+/* Pages */
+.page {
+    padding-top: 120px;
+    width: 85%;
+    margin: auto;
+    line-height: 26px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}

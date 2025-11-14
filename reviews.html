@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Wheel Weight Lifter - Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles - Matching Other Pages */
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #FFFFFF 0%, #E0F7FA 100%); animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: #1E88E5; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .shadow { box-shadow: 0 6px 12px rgba(0,0,0,0.15); border: 2px solid #FFFF00; border-radius: 12px; }
+        /* Header */
+        header { background: linear-gradient(90deg, #1E88E5, #00BCD4); padding: 15px 0; position: fixed; top: 0; width: 100%; z-index: 100; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8em; font-weight: 700; color: #FFFFFF; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; }
+        nav a { color: #FFFFFF; text-decoration: none; font-weight: 700; transition: all 0.3s; padding: 5px 10px; border-radius: 5px; }
+        nav a:hover { background-color: #FFFF00; color: #333; transform: scale(1.05); }
+        /* Footer */
+        footer { background: linear-gradient(90deg, #B0BEC5, #1E88E5); padding: 30px 0; text-align: center; color: #333; }
+        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-around; margin-bottom: 20px; }
+        .footer-section { flex: 1; min-width: 200px; margin: 10px; }
+        .social-icons a { color: #333; font-size: 1.5em; margin: 0 10px; transition: all 0.3s; }
+        .social-icons a:hover { color: #FFFF00; transform: scale(1.2); }
+        /* Review-Specific Styles (Infographic) */
+        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 350px; } }
+        .rounded-lg { border: 1px solid #000000; }
+        /* Responsive */
+        @media (max-width: 768px) { nav ul { flex-direction: column; gap: 15px; } .footer-content { flex-direction: column; } .social-icons a { font-size: 1.2em; } }
+    </style>
+</head>
+<body class="bg-slate-100 font-sans leading-relaxed">
+    <header>
+        <div class="container">
+            <div class="logo">AWWL</div>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Review</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <div class="container mx-auto p-4 md:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-3xl font-semibold text-[#1E88E5] mb-4 text-center">The High Cost of Traditional Warehousing</h2>
+                    <p class="text-lg text-gray-700 mb-6 text-center max-w-3xl mx-auto">
+                        Traditional stockroom and warehouse operations are heavily reliant on manual labor, which introduces significant financial costs, operational inefficiencies, and substantial legal & safety risks.
+                    </p>
+
+                    <div class="flex flex-col md:flex-row flex-wrap justify-around text-center">
+                        <div class="p-4 flex-1 min-w-[200px]">
+                            <span class="text-5xl font-bold text-[#AE2012]">35-45%</span>
+                            <p class="text-lg text-gray-600 mt-2">Of Warehouse OpEx is Labor Costs</p>
+                        </div>
+
+                        <div class="p-4 flex-1 min-w-[200px]">
+                            <span class="text-5xl font-bold text-[#AE2012]">~1 in 20</span>
+                            <p class="text-lg text-gray-600 mt-2">Warehouse Workers Experience Injury</p>
+                        </div>
+
+                        <div class="p-4 flex-1 min-w-[200px]">
+                            <span class="text-5xl font-bold text-[#AE2012]">2.1%</span>
+                            <p class="text-lg text-gray-600 mt-2">Average Inventory Shrinkage Rate</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="lg:col-span-1 bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <h2 class="text-3xl font-semibold text-[#1E88E5] mb-4">The Solution: Logitron</h2>
+                    <p class="text-base text-gray-700 mb-4 flex-grow">
+                        Logitron is an AI-based autonomous pallet lifting and transportation system designed to directly address the core challenges of industrial stockrooms. It automates high-risk, low-efficiency tasks, transforming the warehouse into a modern, data-driven environment.
+                    </p>
+
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Core Business-Facing Features</h3>
+                    <ul class="list-disc list-inside space-y-3 text-gray-700">
+                        <li><strong class="text-[#00BCD4]">Autonomous Navigation:</strong> Optimizes routes to reduce bottlenecks and operational downtime.</li>
+                        <li><strong class="text-[#00BCD4]">AI Collision Avoidance:</strong> Minimizes accidents, reducing corporate liability (Law) and insurance costs (Finance).</li>
+                        <li><strong class="text-[#00BCD4]">Automated Pallet Handling:</strong> Ensures high accuracy, reducing costly stock errors and improving inventory management (Accountancy).</li>
+                    </ul>
+                </section>
+
+                <section class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-3xl font-semibold text-[#1E88E5] mb-4">Optimized Management & Operations Flow</h2>
+                    <p class="text-base text-gray-700 mb-6">
+                        Logitron streamlines the entire fulfillment process, providing clear, auditable steps for management oversight and integrating directly with inventory systems for real-time tracking.
+                    </p>
+
+                    <div class="flex flex-col md:flex-row justify-between items-stretch md:space-x-2 space-y-2 md:space-y-0 h-full">
+                        <div class="flex-1 text-center p-4 bg-blue-100 border-b-4 border-[#00BCD4] rounded-lg shadow min-h-[120px] flex flex-col justify-center transition: transform 0.3s;">
+                            <span class="text-xl font-bold text-blue-900">1. Task Request</span>
+                            <p class="text-sm text-gray-600">(Via Management System)</p>
+                        </div>
+
+                        <div class="text-2xl text-[#00BCD4] font-bold md:hidden self-center">↓</div>
+                        <div class="text-2xl text-[#00BCD4] font-bold hidden md:block self-center">→</div>
+
+                        <div class="flex-1 text-center p-4 bg-teal-100 border-b-4 border-teal-500 rounded-lg shadow min-h-[120px] flex flex-col justify-center transition: transform 0.3s;">
+                            <span class="text-xl font-bold text-teal-900">2. Logitron Dispatches</span>
+                            <p class="text-sm text-gray-600">(AI Pathfinding)</p>
+                        </div>
+
+                        <div class="text-2xl text-teal-500 font-bold md:hidden self-center">↓</div>
+                        <div class="text-2xl text-teal-500 font-bold hidden md:block self-center">→</div>
+
+                        <div class="flex-1 text-center p-4 bg-orange-100 border-b-4 border-[#FFFF00] rounded-lg shadow min-h-[120px] flex flex-col justify-center transition: transform 0.3s;">
+                            <span class="text-xl font-bold text-orange-900">3. Lift & Transport</span>
+                            <p class="text-sm text-gray-600">(Collision Avoidance Active)</p>
+                        </div>
+
+                        <div class="text-2xl text-[#FFFF00] font-bold md:hidden self-center">↓</div>
+                        <div class="text-2xl text-[#FFFF00] font-bold hidden md:block self-center">→</div>
+
+                        <div class="flex-1 text-center p-4 bg-green-100 border-b-4 border-green-500 rounded-lg shadow min-h-[120px] flex flex-col justify-center transition: transform 0.3s;">
+                            <span class="text-xl font-bold text-green-900">4. Delivery & Update</span>
+                            <p class="text-sm text-gray-600">(Inventory System Updated)</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6" style="padding-top: 100px;">
+                    <h2 class="text-3xl font-semibold text-[#1E88E5] mb-4 text-center">Key Business & Financial Impact</h2>
+                    <p class="text-lg text-gray-700 mb-6 text-center max-w-3xl mx-auto">
+                        The adoption of Logitron translates directly into measurable financial and operational gains, addressing core concerns of commerce, finance, and management.
+                    </p>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+                        <div class="lg:col-span-1 bg-slate-50 p-4 rounded-lg shadow-inner flex flex-col h-full">
+                            <h3 class="text-xl font-semibold text-center text-[#00BCD4] mb-2">Operational Cost Reduction</h3>
+                            <p class="text-sm text-gray-600 text-center mb-4 flex-grow">
+                                Logitron significantly cuts variable OpEx associated with manual labor, human error, and compensatory insurance.
+                            </p>
+                            <div class="chart-container">
+                                <canvas id="costChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 bg-slate-50 p-4 rounded-lg shadow-inner flex flex-col h-full">
+                            <h3 class="text-xl font-semibold text-center text-[#00BCD4] mb-2">Productivity & Efficiency Gains</h3>
+                            <p class="text-sm text-gray-600 text-center mb-4 flex-grow">
+                                Autonomous 24/7 operation eliminates idle time and manual bottlenecks, drastically increasing throughput.
+                            </p>
+                            <div class="chart-container">
+                                <canvas id="efficiencyChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-1 bg-slate-50 p-4 rounded-lg shadow-inner flex flex-col h-full">
+                            <h3 class="text-xl font-semibold text-center text-[#00BCD4] mb-2">Workplace Safety & Risk</h3>
+                            <p class="text-sm text-gray-600 text-center mb-4 flex-grow">
+                                Automating high-risk lifting tasks directly reduces accident incidents, lowering legal and insurance liabilities.
+                            </p>
+                            <div class="chart-container">
+                                <canvas id="safetyChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-3xl font-semibold text-[#1E88E5] mb-4 text-center">Relevance to Commerce, Management & Law</h2>
+                    <p class="text-lg text-gray-700 mb-6 text-center max-w-3xl mx-auto">
+                        Logitron is not just an engineering system; it is a comprehensive business solution with direct, high-value applications across commercial, managerial, and legal frameworks.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-blue-100 p-6 rounded-lg shadow border-l-4 border-[#1E88E5]">
+                            <h3 class="text-2xl font-semibold text-blue-900 mb-3">Commerce</h3>
+                            <ul class="list-disc list-inside space-y-2 text-blue-800">
+                                <li>Accelerates e-commerce fulfillment.</li>
+                                <li>Optimizes supply chain logistics.</li>
+                                <li>Increases order accuracy & throughput.</li>
+                                <li>Enables 24/7 commercial operations.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-teal-100 p-6 rounded-lg shadow border-l-4 border-[#00BCD4]">
+                            <h3 class="text-2xl font-semibold text-teal-900 mb-3">Management</h3>
+                            <ul class="list-disc list-inside space-y-2 text-teal-800">
+                                <li>Provides real-time Operations Management data.</li>
+                                <li>Reduces Operational Expenditure (OpEx).</li>
+                                <li>Improves inventory control (Accountancy).</li>
+                                <li>Delivers calculable Return on Investment (Finance).</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-orange-100 p-6 rounded-lg shadow border-l-4 border-[#FFFF00]">
+                            <h3 class="text-2xl font-semibold text-orange-900 mb-3">Law</h3>
+                            <ul class="list-disc list-inside space-y-2 text-orange-800">
+                                <li>Enhances workplace safety & OSHA compliance.</li>
+                                <li>Reduces corporate liability from accidents.</li>
+                                <li>Lowers insurance premium burdens (Insurance).</li>
+                                <li>Creates an auditable trail for stock movement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Address</h4>
+                    <p>123 Industrial Lane, Tech City, State 12345</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Team Emails</h4>
+                    <p><a href="mailto:team1@gmail.com">team1@gmail.com</a></p>
+                    <p><a href="mailto:team2@gmail.com">team2@gmail.com</a></p>
+                    <p><a href="mailto:team3@gmail.com">team3@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/your-handle" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:your-email@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2023 Autonomous Wheel Weight Lifter Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  function wrapLabels(label) {
+    const maxLen = 16;
+    if (typeof label !== 'string' || label.length <= maxLen) {
+      return label;
+    }
+    const words = label.split(' ');
+    const lines = [];
+    let currentLine = '';
+    for (const word of words) {
+      if ((currentLine + ' ' + word).length <= maxLen || currentLine.length === 0) {
+        currentLine += (currentLine.length === 0 ? '' : ' ') + word;
+      } else {
+        lines.push(currentLine);
+        currentLine = word;
+      }
+    }
+    if (currentLine.length > 0) {
+      lines.push(currentLine);
+    }
+    return lines;
+  }
+
+  const tooltipTitleCallback = (tooltipItems) => {
+    const item = tooltipItems[0];
+    if (!item) return '';
+    let label = item.chart.data.labels[item.dataIndex];
+    if (Array.isArray(label)) {
+      return label.join(' ');
+    }
+    return label;
+  };
+
+  const commonTooltipConfig = {
+    enabled: true,
+    callbacks: {
+      title: tooltipTitleCallback
+    }
+  };
+
+  const commonLegendConfig = {
+    position: 'bottom',
+    labels: {
+      font: {
+        size: 12
+      }
+    }
+  };
+
+  Chart.defaults.font.family = "'Inter', 'sans-serif'";
+
+  // Blue color palette (only for charts)
+  const bluePalette = {
+    dark: '#08306B',
+    primary: '#0B66D1',
+    mid: '#3B82F6',
+    light: '#93C5FD'
+  };
+
+  if (document.getElementById('costChart')) {
+    const ctxCost = document.getElementById('costChart').getContext('2d');
+    const costLabels = ['Direct Labor Costs', 'Error & Rework Costs', 'Insurance Premiums'].map(wrapLabels);
+    new Chart(ctxCost, {
+      type: 'bar',
+      data: {
+        labels: costLabels,
+        datasets: [
+          {
+            label: 'Manual System',
+            data: [100, 20, 15],
+            backgroundColor: bluePalette.dark,
+            borderColor: '#052449',
+            borderWidth: 1
+          },
+          {
+            label: 'Logitron System',
+            data: [15, 3, 5],
+            backgroundColor: bluePalette.primary,
+            borderColor: '#064a8f',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          tooltip: commonTooltipConfig,
+          legend: commonLegendConfig,
+          title: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: (val) => (val + 'K USD (Est. Annual)')
+            }
+          }
+        }
+      }
+    });
+  }
+
+  if (document.getElementById('efficiencyChart')) {
+    const ctxEfficiency = document.getElementById('efficiencyChart').getContext('2d');
+    const effLabels = ['Manual Operator', 'Logitron Unit'].map(wrapLabels);
+    new Chart(ctxEfficiency, {
+      type: 'bar',
+      data: {
+        labels: effLabels,
+        datasets: [
+          {
+            label: 'Pallets per Hour',
+            data: [8, 30],
+            backgroundColor: [bluePalette.mid, bluePalette.primary],
+            borderColor: ['#1e4bb8', '#064a8f'],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: {
+          tooltip: commonTooltipConfig,
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Pallets Moved per Hour'
+            }
+          }
+        }
+      }
+    });
+  }
+
+  if (document.getElementById('safetyChart')) {
+    const ctxSafety = document.getElementById('safetyChart').getContext('2d');
+    const safetyLabels = ['Manual Incidents', 'Logitron Incidents'].map(wrapLabels);
+    new Chart(ctxSafety, {
+      type: 'doughnut',
+      data: {
+        labels: safetyLabels,
+        datasets: [
+          {
+            label: 'Annual Reportable Incidents',
+            data: [25, 2],
+            backgroundColor: [bluePalette.dark, bluePalette.primary],
+            hoverOffset: 4,
+            borderColor: '#ffffff',
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          tooltip: commonTooltipConfig,
+          legend: commonLegendConfig,
+        },
+        cutout: '60%'
+      }
+    });
+  }
+
+});
+</script>
